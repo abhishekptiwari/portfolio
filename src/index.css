@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Body Styling === */
+body {
+    @apply bg-gray-50 text-gray-800;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* === Heading Styles === */
+h1, h2, h3 {
+    @apply font-bold;
+}
+
+h1 {
+    @apply text-4xl md:text-5xl;
+}
+
+h2 {
+    @apply text-3xl md:text-4xl;
+}
+
+h3 {
+    @apply text-2xl md:text-3xl;
+}
+
+/* === Link Styling === */
+a {
+    @apply text-blue-500 hover:text-blue-600 transition-all duration-200;
+}
+
+/* === Button Styling === */
+button {
+    @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-all duration-200;
+}
+
+/* === Card Styling === */
+.card {
+    @apply bg-white p-6 rounded-xl shadow-md border border-gray-200;
+}
+
+/* === Section Spacing === */
+section {
+    @apply py-16 px-8;
+}
+
+/* === Smooth Scroll === */
+html {
+    scroll-behavior: smooth;
+}
+
+/* === Custom Animations === */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Custom Scrollbar (Optional) === */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #4A90E2;
+    border-radius: 10px;
+}
