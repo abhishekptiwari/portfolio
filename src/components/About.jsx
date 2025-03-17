@@ -28,6 +28,7 @@ const techStack = [
     'https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white',
     'https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white',
     'https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white',
+    'https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white',
     'https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white',
     'https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white',
     'https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white',
@@ -38,11 +39,11 @@ const About = () => {
     return (
         <div className="min-h-screen bg-[#001F3F] text-white font-mono">
             <NavBar />
-            <section className="flex px-12 pt-20 gap-12">
+            <section className="flex flex-col md:flex-row px-4 md:px-12 pt-10 gap-8 md:gap-12">
                 {/* Left Section */}
                 <div className="flex-1">
                     <motion.h1
-                        className="text-4xl font-extrabold mb-8 text-[#c1e7ff] tracking-wide"
+                        className="text-3xl md:text-4xl font-extrabold mb-6 text-[#c1e7ff] tracking-wide"
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
@@ -51,7 +52,7 @@ const About = () => {
                     </motion.h1>
 
                     <motion.p
-                        className="text-[#A9B9C3] text-lg w-full max-w-5xl text-left leading-relaxed"
+                        className="text-[#A9B9C3] text-base md:text-lg leading-relaxed"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
@@ -60,21 +61,23 @@ const About = () => {
                         various advanced technologies, including React.js, Express.js, MongoDB, AWS, MySQL, Linux, Redis, and Memcached.
                     </motion.p>
 
-                    <h2 className="mt-12 text-2xl text-[#c1e7ff] tracking-wide">My Tech Stack</h2>
+                    <h2 className="mt-10 text-2xl text-[#c1e7ff] tracking-wide">My Tech Stack</h2>
                     <div className="flex flex-wrap gap-2 mt-4">
                         {techStack.map((src, index) => (
-                            <img key={index} src={src} alt="Tech Stack Badge" className="h-8" />
+                            <img key={index} src={src} alt="Tech Stack Badge" className="h-6 md:h-8" loading="lazy" />
                         ))}
                     </div>
-                    <h2 className="mt-12 text-2xl text-[#c1e7ff] tracking-wide">Certifications</h2>
+
+                    <h2 className="mt-10 text-2xl text-[#c1e7ff] tracking-wide">Certifications</h2>
                     <div className="flex items-center gap-4 mt-4">
-                        <img src="/aws-ccp-badge.png" alt="AWS Certified Cloud Practitioner" className="w-24" />
+                        <img src="/aws-ccp-badge.png" alt="AWS Certified Cloud Practitioner" className="w-20 md:w-24" />
                     </div>
                 </div>
 
-                <div className="relative flex items-center justify-center w-[400px]">
-                    <PieChart width={400} height={400}>
-                        <Pie data={data} cx="50%" cy="50%" innerRadius={60} outerRadius={100} dataKey="value">
+                {/* Right Section */}
+                <div className="relative flex items-center justify-center w-full md:w-[400px]">
+                    <PieChart width={400} height={300}>
+                        <Pie data={data} cx="50%" cy="50%" innerRadius={50} outerRadius={90} dataKey="value">
                             {data.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={entry.color} />
                             ))}
@@ -83,14 +86,12 @@ const About = () => {
                         <Legend layout="vertical" align="right" verticalAlign="middle" />
                     </PieChart>
                     <p className="absolute bottom-[-5px] text-sm text-[#A9B9C3]">
-                        Top languages (based on lines of code written)
+                        Technology Usage Breakdown
                     </p>
                 </div>
-
             </section>
         </div>
     );
 };
 
 export default About;
-

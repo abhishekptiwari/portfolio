@@ -7,13 +7,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-[#001F3F] text-white font-mono">
       <NavBar />
-      <section className="flex flex-col items-center px-12 pt-20">
-        <h1 className="text-4xl font-extrabold mb-8 text-[#c1e7ff] tracking-wide">
+      <section className="flex flex-col items-center px-4 md:px-12 pt-10 md:pt-20">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-6 md:mb-8 text-[#c1e7ff] tracking-wide">
           Let's Get In Touch
         </h1>
 
         <motion.p
-          className="text-[#A9B9C3] text-lg w-full max-w-5xl text-center leading-relaxed"
+          className="text-[#A9B9C3] text-base md:text-lg w-full max-w-5xl text-center leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
@@ -24,34 +24,34 @@ const Contact = () => {
           I'll try to get back to you as soon as I can.
         </motion.p>
 
-        <h3 className="mt-12 text-2xl text-[#c1e7ff] tracking-wide">
+        <h3 className="mt-10 md:mt-12 text-xl md:text-2xl text-[#c1e7ff] tracking-wide">
           Here are my Socials
         </h3>
 
-        <div className="flex gap-8 mt-6">
+        <div className="grid grid-cols-2 md:flex gap-6 md:gap-8 mt-6">
           <a href="mailto:abhishektiwariaman@gmail.com" target="_blank" rel="noopener noreferrer">
-            <FaEnvelope className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaEnvelope className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
           <a href="https://x.com/abhishekCloud7" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaTwitter className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
           <a href="https://www.linkedin.com/in/the-abhishek-tiwari/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaLinkedin className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
           <a href="https://github.com/abhishekptiwari" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaGithub className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
           <a href="#" target="_blank" rel="noopener noreferrer">
-            <FaInstagram className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaInstagram className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
           <a href="https://www.chess.com/member/abhishek-tiwari-07" target="_blank" rel="noopener noreferrer">
-            <FaChessKing className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaChessKing className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
           <a href="https://leetcode.com/u/abhishek_tiwari_coder/" target="_blank" rel="noopener noreferrer">
-            <FaCode className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaCode className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
           <a href="tel:+919579202967" target="_blank" rel="noopener noreferrer">
-            <FaPhone className="text-yellow-400 text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
+            <FaPhone className="text-yellow-400 text-3xl md:text-4xl cursor-pointer hover:scale-110 transition-transform duration-200" />
           </a>
         </div>
       </section>
